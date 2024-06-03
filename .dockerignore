@@ -1,0 +1,45 @@
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# Compiled binary addons (http://nodejs.org/api/addons.html)
+build/Release
+
+# Dependency directory
+# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git-
+node_modules
+
+# webstorm info
+.ideagit
+.idea
+
+# Keep this file
+!.gitkeep
+
+report.xml
+run
+
+
+# PROJECT
+npm-debug.log
+
+#artifacts
+artifacts/*
+
+# exception to the rule
+!artifacts/orm
+!devops/grafana
+!devops/promtail
+!artifacts/coverage/.gitkeep
+!artifacts/dist/.gitkeep
+!artifacts/documentation/.gitkeep
+!artifacts/tmp/.gitkeep
+!artifacts/message-broker/.gitkeep
+
+# Docker TMP file
+/ts-node*

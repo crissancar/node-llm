@@ -1,0 +1,48 @@
+version: '3.9'
+
+services:
+  elasticsearch:
+    container_name: node-llm-elasticsearch
+    image: "elasticsearch:8.13.4"
+    ports:
+      - "9200:9200"
+    environment:
+      - discovery.type=single-node
+      - ELASTIC_USERNAME=admin
+      - ELASTIC_PASSWORD=admin
+    volumes:
+      - esdata:/usr/share/elasticsearch/data
+    networks:
+      - node-llm-network
+
+  kibana:
+    container_name: node-llm-kibana
+    image: "kibana:8.13.4"
+    ports:
+      - "5601:5601"
+    environment:
+      - ELASTICSEARCH_URL=http://elasticsearch:9200
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+    depends_on:
+      - elasticsearch
+    networks:
+      - node-llm-network
+
+  mongo:
+    container_name: node-llm-mongo
+    image: "mongo:latest"
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      - node-llm-network
+
+volumes:
+  node_modules:
+  mongo_data:
+  esdata:
+
+
+networks:
+  node-llm-network:

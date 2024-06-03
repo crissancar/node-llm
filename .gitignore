@@ -1,0 +1,64 @@
+# environments
+.env
+
+# local history
+.history
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# Compiled binary addons (http://nodejs.org/api/addons.html)
+build/Release
+
+# Dependency directory
+# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git-
+node_modules
+
+# webstorm info
+.ideagit
+.idea
+.vscode
+
+# Keep this file
+!.gitkeep
+
+eslint.xml
+report.xml
+typescript
+run
+
+
+# PROJECT
+npm-debug.log
+package-lock.json
+
+# swc dist
+dist
+
+#artifacts
+artifacts/files/csv/imdb.csv
+artifacts/files/csv/imdb-min.csv
+artifacts/training/*
+artifacts/imdb/*
+artifacts/coverage/*
+artifacts/db/*
+artifacts/swagger/*
+artifacts/logs/*
+artifacts/dist/*
+artifacts/documentation/*
+artifacts/public/*
+artifacts/tmp/*
+artifacts/postgres/*
+artifacts/compodoc/*
+
+# Docker TMP file
+/ts-node*
+
+# Env file for IntelliJ
+env-intellij.txt

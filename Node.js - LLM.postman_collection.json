@@ -1,0 +1,238 @@
+{
+	"info": {
+		"_postman_id": "04fb6505-a26b-48e6-acc6-759b5ff8f609",
+		"name": "Node.js - LLM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27642326"
+	},
+	"item": [
+		{
+			"name": "Pokémons Team",
+			"item": [
+				{
+					"name": "Ollama",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5001/pokemons/ollama?captain=Clefairy",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"pokemons",
+								"ollama"
+							],
+							"query": [
+								{
+									"key": "captain",
+									"value": "Clefairy"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cohere",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5001/pokemons/cohere?captain=Clefairy",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"pokemons",
+								"cohere"
+							],
+							"query": [
+								{
+									"key": "captain",
+									"value": "Clefairy"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Training",
+			"item": [
+				{
+					"name": "IMDB dataset",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5001/trainings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"trainings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "IMDB dataset",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5001/trainings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"trainings"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Articles",
+			"item": [
+				{
+					"name": "Social networks - Train",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5001/articles/train",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"articles",
+								"train"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Social network - Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5001/articles?search=A partir de esto, resulta indispensable por parte de los adultos autoeducarse y aprender todo lo relativo a internet, aplicaciones y redes sociales.",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"articles"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "A partir de esto, resulta indispensable por parte de los adultos autoeducarse y aprender todo lo relativo a internet, aplicaciones y redes sociales."
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UFC - Summary",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5001/articles/summary",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"articles",
+								"summary"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Prompts",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"prompt\": \"¿Qué librería es más utilizada en el desarrollo de aplicaciones LLM en JavaScript?\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/prompts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"prompts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5001/prompts?prompt=modelo LLM es más apropiado para un chatbot en Python",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"prompts"
+							],
+							"query": [
+								{
+									"key": "prompt",
+									"value": "modelo LLM es más apropiado para un chatbot en Python"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
